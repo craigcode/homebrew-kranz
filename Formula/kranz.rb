@@ -12,6 +12,7 @@ class Kranz < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/kranz --version")
     assert_match "kranz", shell_output("#{bin}/kranz --help")
   end
 end
